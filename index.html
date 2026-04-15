@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>TWETA GLOBAL NETWORK (TGN)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0,1" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: #0E0E0E;
+      color: #F0F5F7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: clamp(14px, 2vw, 16px);
+    }
+    
+    .glass-panel {
+      background: rgba(18, 18, 18, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(59, 158, 255, 0.12);
+    }
+    
+    .radial-bg-pulse {
+      background: radial-gradient(circle at 50% 40%, rgba(59, 158, 255, 0.06) 0%, rgba(14, 14, 14, 0) 75%);
+    }
+    
+    .accent-glow {
+      box-shadow: 0 0 60px rgba(59, 158, 255, 0.1);
+    }
+    
+    .tracking-widest-xl {
+      letter-spacing: 0.3em;
+    }
+    
+    :focus-visible {
+      outline: 1px solid #3B9EFF;
+      outline-offset: 2px;
+    }
+    
+    @media (max-width: 640px) {
+      section {
+        padding-top: 4rem !important;
+      }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: '#0E0E0E',
+            'surface-dim': '#0A0A0A',
+            'surface-container': '#181818',
+            'surface-container-lowest': '#080808',
+            primary: '#EFF7FF',
+            'primary-container': '#3B9EFF',
+            'on-surface': '#EDEDED',
+            'on-surface-variant': '#A0B3B8',
+            outline: '#2A3A40',
+            'outline-variant': '#1F2C30',
+            'surface-bright': '#2A2A2A',
+          },
+          borderRadius: {
+            DEFAULT: '0px',
+            lg: '0px',
+            xl: '0px',
+            full: '9999px'
+          },
+          fontFamily: {
+            headline: ['"Space Grotesk"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+            label: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface font-body selection:bg-primary-container/30 selection:text-primary">
+<nav class="fixed top-0 w-full z-50 glass-panel border-b border-primary-container/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+    <div class="font-headline text-primary font-bold tracking-widest uppercase text-sm sm:text-base">TWETA GLOBAL NETWORK</div>
+    
+    <!-- Desktop  -->
+    <div class="hidden md:flex gap-6 lg:gap-8">
+      <a href="#home" class="text-xs lg:text-sm text-on-surface-variant hover:text-primary transition-colors hover:underline underline-offset-4">Home</a>
+      <a href="#ai" class="text-xs lg:text-sm text-on-surface-variant hover:text-primary transition-colors hover:underline underline-offset-4">AI</a>
+      <a href="#infrastructure" class="text-xs lg:text-sm text-on-surface-variant hover:text-primary transition-colors hover:underline underline-offset-4">Infrastructure</a>
+      <a href="#security" class="text-xs lg:text-sm text-on-surface-variant hover:text-primary transition-colors hover:underline underline-offset-4">Security</a>
+      <a href="#privacy" class="text-xs lg:text-sm text-on-surface-variant hover:text-primary transition-colors hover:underline underline-offset-4">Privacy</a>
+      <a href="#scale" class="text-xs lg:text-sm text-on-surface-variant hover:text-primary transition-colors hover:underline underline-offset-4">Scale</a>
+    </div>
+    
+    <!-- Mobile -->
+    <button id="menu-btn" class="md:hidden text-primary p-2 hover:bg-primary-container/20 rounded transition-colors" aria-label="Toggle menu" aria-expanded="false">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  
+  <!-- Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-primary-container/10 bg-surface-dim">
+    <a href="#home" class="block px-4 sm:px-6 py-3 text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-colors">Home</a>
+    <a href="#ai" class="block px-4 sm:px-6 py-3 text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-colors">AI Integrated</a>
+    <a href="#infrastructure" class="block px-4 sm:px-6 py-3 text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-colors">Infrastructure</a>
+    <a href="#security" class="block px-4 sm:px-6 py-3 text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-colors">Security</a>
+    <a href="#privacy" class="block px-4 sm:px-6 py-3 text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-colors">Privacy</a>
+    <a href="#scale" class="block px-4 sm:px-6 py-3 text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-colors">Scale</a>
+  </div>
+</nav>
+<section id="home" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-3 sm:px-6 pt-24 sm:pt-20 pb-8">
+  <div class="absolute inset-0 radial-bg-pulse pointer-events-none"></div>
+  
+  <div class="z-10 text-center max-w-7xl w-full">
+    <div class="mb-6 sm:mb-8">
+      <h1 class="font-headline text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-[0.12em] text-primary uppercase leading-tight sm:leading-[1.1]">
+        TWETA GLOBAL NETWORK
+      </h1>
+      <!-- <div class="font-label text-primary-container/80 text-base md:text-lg tracking-[0.3em] uppercase mt-3 flex items-center justify-center gap-3">
+        <span class="w-8 h-px bg-primary-container/40"></span>
+        <span class="border border-primary-container/40 px-6 py-2 backdrop-blur-sm">TGN</span>
+        <span class="w-8 h-px bg-primary-container/40"></span>
+      </div> -->
+    </div>
+    <div class="relative w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto mb-8 sm:mb-12 group">
+      <div class="absolute inset-0 rounded-full glass-panel accent-glow flex items-center justify-center overflow-hidden">
+        <div class="w-full h-full opacity-20 bg-gradient-to-br from-primary-container/40 to-transparent"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-4/5 h-px bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-40"></div>
+          <div class="h-4/5 w-px bg-gradient-to-b from-transparent via-primary-container to-transparent opacity-40"></div>
+        </div>
+        <span class="material-symbols-outlined text-3xl sm:text-4xl md:text-5xl text-primary-container/50 font-thin" style="font-variation-settings: 'FILL' 0, 'wght' 200;">network_intelligence</span>
+      </div>
+      <div class="absolute -inset-6 bg-primary-container/5 rounded-full blur-3xl -z-5"></div>
+    </div>
+
+    <p class="font-label text-on-surface-variant text-[10px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.35em] uppercase max-w-3xl mx-auto px-2">
+      The Next Phase of Blockchain Technology & Cryptocurrencies
+    </p>
+    <p class="font-body text-sm sm:text-base md:text-lg lg:text-xl text-on-surface-variant/80 mt-4 sm:mt-5 max-w-3xl mx-auto font-light leading-relaxed px-2">
+      A sovereign blockchain ecosystem powered by artificial intelligence — engineered for sub‑second finality, post‑quantum security, and seamless planetary scale. The TGN protocol introduces a novel hybrid consensus mechanism that combines delegated proof‑of‑stake with AI‑driven validation optimisation.
+    </p>
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-10 mt-6 sm:mt-8 font-label text-[8px] sm:text-[10px] text-on-surface-variant/50 uppercase tracking-wider px-2">
+      <span>50,000 TPS SUSTAINED</span>
+      <span>PQ‑RESISTANT CRYPTOGRAPHY</span>
+      <span>AI‑NATIVE EXECUTION</span>
+      <span>200M+ TARGET SCALE</span>
+    </div>
+  </div>
+  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+    <span class="font-label text-[10px] text-on-surface-variant/40 uppercase tracking-widest">Initialization Sequence</span>
+    <div class="w-px h-10 bg-gradient-to-b from-primary-container/60 to-transparent"></div>
+  </div>
+</section>
+<section id="ai" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 relative">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 xl:gap-24 items-center max-w-7xl mx-auto w-full">
+    <div class="order-2 lg:order-1">
+      <div class="font-label text-primary-container text-xs mb-4 sm:mb-6 flex items-center gap-3">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">memory</span>
+        <span class="tracking-widest">COGNITIVE LAYER</span>
+      </div>
+      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-4 sm:mb-6 tracking-wide uppercase">
+        AI Integrated
+      </h2>
+      <p class="font-body text-sm sm:text-base md:text-lg lg:text-xl text-on-surface-variant/80 leading-relaxed font-light max-w-xl mb-4 sm:mb-6">
+        Intelligent automation across the blockchain. Synthetic neural cores handle high‑frequency transaction verification, predictive fee markets, and adaptive load balancing. The system continuously learns from network conditions to optimise throughput and reduce latency.
+      </p>
+      <div class="space-y-2 sm:space-y-3 text-on-surface-variant/70 text-xs sm:text-sm md:text-base font-light">
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>Real‑time fraud detection via on‑chain anomaly scoring models</span></div>
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>Self‑optimising shard topology that redistributes load dynamically</span></div>
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>AI‑assisted smart contract auditing and formal verification</span></div>
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>Predictive gas pricing to minimise user costs during congestion</span></div>
+      </div>
+    </div>
+    <div class="order-1 lg:order-2 flex justify-center relative w-full">
+      <div class="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square border border-outline-variant/20 glass-panel p-4 sm:p-6 md:p-8 lg:p-10 flex items-center justify-center">
+        <img class="w-full h-full object-contain mix-blend-screen opacity-80" alt="Abstract neural core with hexagonal patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYLulChNVn0l4Y3IHMH-36jouFrm7WLZ042vdER5kjpk9yefbSfZ5J5-JxiNyOzIOZvW0r-zevzVW3sIvxqp591JFn2jLTuM5RYMCs3aJQT_l5EXdqq3pDQ3wxtLrho4zfEyDn8jiv5AW0ulpp5Mi-eaoJxupQEke5E8mFTs7sNYl2jCQdW0nXWhqhJ-YnX50Nr-hP01d6c8iaQcGd8cpBbXXu0ZPouux2f-Vb70ipEznnyh87qvUWbH7IkS3vmW_0FgyNL606480"/>
+      </div>
+      <div class="absolute -z-10 w-64 h-64 bg-primary-container/10 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+  </div>
+</section>
+<section id="infrastructure" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 bg-surface-dim">
+  <div class="max-w-7xl w-full">
+    <div class="mb-8 sm:mb-12 lg:mb-16 text-center">
+      <div class="font-label text-primary-container/80 text-[10px] sm:text-xs mb-4 sm:mb-6 tracking-[0.2em] sm:tracking-[0.3em] uppercase">Global Node Lattice</div>
+      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary tracking-tight uppercase">
+        Lightning Speed Infrastructure
+      </h2>
+      <p class="font-body text-on-surface-variant/70 max-w-3xl mx-auto mt-3 sm:mt-4 text-xs sm:text-sm md:text-base font-light px-2">
+        Near‑instant execution with optimised consensus. Sub‑5ms cross‑shard communication, 50,000+ sustained transactions per second. The network leverages a hierarchical sharding architecture with recursive zero‑knowledge proofs for state verification.
+      </p>
+    </div>
+    
+    <div class="relative w-full aspect-video sm:aspect-[16/9] border border-outline-variant/20 bg-surface-container overflow-hidden rounded">
+      <img class="w-full h-full object-cover opacity-60 grayscale" alt="Global network map with glowing nodes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_3Lj2BOELt4bcn0ank2tnTBCFVR4qL80QZj9eo-yaRUOL6Hjq4-z445sz8Ock8T7FTA339IULfIGFiLu2O2NIm28slr_B6DnM6BpVLmQMZgtzKhgBh1YyUZpvk-BfhVyICOkSoBp04SdqdnXcPYawsHBHealdrXzqS-QFXB5N9IMQX6XTMdRdHLMngKGjjnZujmOmeKDOaqcmZPj_W_4R9SP9syOMGkHnH3UIQef4IJPFKhmhIBdSgsSdDhRqzj4ZCWMOyW00R50"/>
+      
+      <div class="absolute inset-x-4 sm:inset-x-6 top-4 sm:top-6 grid grid-cols-3 sm:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
+        <div class="glass-panel p-3 sm:p-4 md:p-5 border-l-2 border-primary-container">
+          <div class="font-label text-primary-container text-lg sm:text-xl md:text-2xl font-medium">1.2M</div>
+          <div class="font-label text-on-surface-variant text-[8px] sm:text-[10px] tracking-widest uppercase mt-1">Active Validators</div>
+        </div>
+        <div class="glass-panel p-3 sm:p-4 md:p-5 border-l-2 border-primary-container">
+          <div class="font-label text-primary-container text-lg sm:text-xl md:text-2xl font-medium">&lt; 5ms</div>
+          <div class="font-label text-on-surface-variant text-[8px] sm:text-[10px] tracking-widest uppercase mt-1">Block Time</div>
+        </div>
+        <div class="glass-panel p-3 sm:p-4 md:p-5 border-l-2 border-primary-container">
+          <div class="font-label text-primary-container text-lg sm:text-xl md:text-2xl font-medium">50k+</div>
+          <div class="font-label text-on-surface-variant text-[8px] sm:text-[10px] tracking-widest uppercase mt-1">TPS (Sustained)</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mt-6 sm:mt-8 text-center">
+      <div class="font-label text-on-surface-variant/60 text-[8px] sm:text-[10px] uppercase tracking-wider">12 REGIONAL SHARDS</div>
+      <div class="font-label text-on-surface-variant/60 text-[8px] sm:text-[10px] uppercase tracking-wider">0.8s FINALITY</div>
+      <div class="font-label text-on-surface-variant/60 text-[8px] sm:text-[10px] uppercase tracking-wider">99.99% UPTIME</div>
+      <div class="font-label text-on-surface-variant/60 text-[8px] sm:text-[10px] uppercase tracking-wider">190+ COUNTRIES</div>
+    </div>
+  </div>
+</section>
+<section id="security" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 relative">
+  <div class="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-container/10 blur-[140px] -translate-y-1/2 translate-x-1/2"></div>
+  </div>
+  
+  <div class="max-w-4xl w-full text-center space-y-8 sm:space-y-10 lg:space-y-14">
+    <div class="flex justify-center">
+      <div class="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 flex items-center justify-center">
+        <span class="material-symbols-outlined text-4xl sm:text-5xl lg:text-7xl text-primary-container/70 font-thin" style="font-variation-settings: 'FILL' 0, 'wght' 100;">encrypted</span>
+        <div class="absolute inset-0 border border-primary-container/30 rounded-full animate-[spin_12s_linear_infinite]"></div>
+        <div class="absolute -inset-3 border border-outline-variant/20 rounded-full animate-[spin_16s_linear_infinite_reverse]"></div>
+      </div>
+    </div>
+    
+    <div>
+      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 lg:mb-8 tracking-wider uppercase">
+        Highly Secured
+      </h2>
+      <p class="font-body text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-on-surface-variant/80 font-light max-w-2xl mx-auto leading-relaxed px-2">
+        Advanced encryption and resilient architecture. Post‑quantum cryptographic primitives ensure zero‑threat operation against both classical and quantum adversaries.
+      </p>
+      <p class="font-body text-xs sm:text-sm text-on-surface-variant/50 max-w-xl mx-auto mt-4 sm:mt-6 px-2">
+        Formal verification of the consensus protocol, secure enclave integration for validator key management, and real‑time threat monitoring via distributed honeypots.
+      </p>
+    </div>
+    
+    <div class="flex justify-center gap-8 sm:gap-12 pt-4 sm:pt-6 flex-wrap">
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-primary-container/80 mb-2 sm:mb-3" style="font-variation-settings: 'wght' 200;">lock</span>
+        <span class="font-label text-[8px] sm:text-[10px] text-on-surface-variant uppercase tracking-widest">Encryption Active</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-primary-container/80 mb-2 sm:mb-3" style="font-variation-settings: 'wght' 200;">shield</span>
+        <span class="font-label text-[8px] sm:text-[10px] text-on-surface-variant uppercase tracking-widest">Resilience 100%</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="material-symbols-outlined text-primary-container/80 mb-2 sm:mb-3" style="font-variation-settings: 'wght' 200;">key_visualizer</span>
+        <span class="font-label text-[8px] sm:text-[10px] text-on-surface-variant uppercase tracking-widest">PQ‑Ready</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="privacy" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 bg-surface-dim relative">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 xl:gap-24 items-center max-w-7xl mx-auto w-full">
+    <div class="order-2 lg:order-1">
+      <div class="font-label text-primary-container text-xs mb-4 sm:mb-6 flex items-center gap-3">
+        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">visibility_off</span>
+        <span class="tracking-widest">PRIVACY LAYER</span>
+      </div>
+      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary mb-4 sm:mb-6 tracking-wide uppercase">
+        Advanced Anonymity
+      </h2>
+      <p class="font-body text-sm sm:text-base md:text-lg lg:text-xl text-on-surface-variant/80 leading-relaxed font-light max-w-xl mb-4 sm:mb-6">
+        Privacy‑first design with identity protection. Zero‑knowledge proofs, stealth addressing, and optional shielded pools give users complete control over transactional privacy while remaining compliant with regulatory frameworks through selective disclosure.
+      </p>
+      <div class="space-y-2 sm:space-y-3 text-on-surface-variant/70 text-xs sm:text-sm md:text-base font-light">
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>zk‑SNARKs for fully confidential transactions</span></div>
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>Stealth meta‑addresses prevent on‑chain linkage</span></div>
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>View keys for auditing without exposing private data</span></div>
+        <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>Compliance‑friendly selective disclosure for institutions</span></div>
+      </div>
+    </div>
+    <div class="order-1 lg:order-2 flex justify-center relative w-full hidden lg:flex">
+      <div class="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square border border-outline-variant/20 glass-panel p-4 sm:p-6 md:p-8 lg:p-10 flex items-center justify-center">
+        <span class="material-symbols-outlined text-5xl sm:text-7xl md:text-[100px] lg:text-[140px] xl:text-[160px] text-primary-container/20" style="font-variation-settings: 'FILL' 0, 'wght' 200;">incognito</span>
+      </div>
+      <div class="absolute -z-10 w-64 h-64 bg-primary-container/10 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+    </div>
+  </div>
+</section>
+<section id="scale" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 relative overflow-hidden">
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden opacity-[0.02]">
+    <span class="font-headline text-[25vw] font-black tracking-tighter text-primary">SCALE</span>
+  </div>
+  
+  <div class="z-10 text-center space-y-4 sm:space-y-6 max-w-6xl px-4">
+    <div class="font-label text-primary-container/80 text-[10px] sm:text-sm tracking-[0.6em] sm:tracking-[0.8em] uppercase mb-4 sm:mb-8">Mainnet Phase III</div>
+    <h2 class="font-headline text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[120px] font-extrabold text-primary leading-tight sm:leading-none tracking-tight">
+      200M+ USERS
+    </h2>
+    <p class="font-headline text-base sm:text-lg md:text-2xl lg:text-3xl text-on-surface-variant font-light tracking-wide">
+      Incoming. Built for massive global scalability.
+    </p>
+    <div class="flex flex-wrap justify-center gap-2 sm:gap-4 md:gap-6 lg:gap-12 mt-6 sm:mt-8 text-on-surface-variant/60 font-label text-[8px] sm:text-xs uppercase tracking-wider">
+      <span>12 REGIONAL SHARDS</span>
+      <span>50,000 TPS PEAK</span>
+      <span>190+ COUNTRIES SUPPORTED</span>
+    </div>
+    <p class="font-body text-on-surface-variant/60 text-xs sm:text-sm md:text-base max-w-2xl mx-auto mt-4 sm:mt-6 leading-relaxed">
+      The network is architected for horizontal scaling: each shard processes independently, with communication finalised in under 5ms. Validator set rotates via AI‑driven reputation scoring.
+    </p>
+    <div class="mt-10 sm:mt-14 lg:mt-16 h-px w-40 sm:w-48 mx-auto bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+  </div>
+</section>
+
+<footer class="border-t border-primary-container/10 bg-surface w-full">
+  <div class="flex flex-col gap-6 md:gap-0 md:flex-row justify-between items-center w-full px-4 sm:px-8 md:px-12 py-8 sm:py-10 max-w-screen-2xl mx-auto">
+    <div class="text-primary font-headline tracking-[0.2em] font-bold uppercase text-xs sm:text-sm flex items-center gap-2">
+      TWETA 
+   </div>
+    
+    <div class="flex flex-wrap justify-center gap-x-8 sm:gap-x-10 gap-y-2 sm:gap-y-3 items-center">
+      <div class="flex flex-col items-center md:items-start gap-1">
+        <span class="text-primary-container/80 font-label tracking-wider text-[8px] sm:text-[10px] uppercase">SYSTEM: OPTIMAL</span>
+        <span class="text-on-surface-variant/60 font-label tracking-wider text-[8px] sm:text-[10px] uppercase">LATENCY: &lt;5ms</span>
+        <span class="text-on-surface-variant/60 font-label tracking-wider text-[8px] sm:text-[10px] uppercase">ENCRYPTION: PQ‑ACTIVE</span>
+      </div>
+    </div>
+    
+    <div class="text-on-surface-variant/40 font-label tracking-[0.1em] text-[8px] sm:text-[10px] uppercase">
+      © 2026 TWETA GLOBAL NETWORK
+    </div>
+  </div>
+</footer>
+
+<style>
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .animate-spin-slow { animation: spin 12s linear infinite; }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @media (max-width: 640px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', !isHidden);
+    });
+    
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
+</body>
+</html>
