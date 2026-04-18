@@ -19,8 +19,8 @@
     }
     
     body {
-      background-color: #0E0E0E;
-      color: #F0F5F7;
+      background-color: #0B0C10;
+      color: #F6F7F9;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -28,18 +28,18 @@
     }
     
     .glass-panel {
-      background: rgba(18, 18, 18, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(59, 158, 255, 0.12);
+      background: rgba(17, 18, 23, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(244, 185, 80, 0.14);
     }
     
     .radial-bg-pulse {
-      background: radial-gradient(circle at 50% 40%, rgba(59, 158, 255, 0.06) 0%, rgba(14, 14, 14, 0) 75%);
+      background: rgba(244, 185, 80, 0.035);
     }
     
     .accent-glow {
-      box-shadow: 0 0 60px rgba(59, 158, 255, 0.1);
+      box-shadow: 0 0 80px rgba(244, 185, 80, 0.12);
     }
     
     .tracking-widest-xl {
@@ -47,7 +47,7 @@
     }
     
     :focus-visible {
-      outline: 1px solid #3B9EFF;
+      outline: 1px solid #F4B950;
       outline-offset: 2px;
     }
     
@@ -63,18 +63,18 @@
       theme: {
         extend: {
           colors: {
-            surface: '#0E0E0E',
-            'surface-dim': '#0A0A0A',
-            'surface-container': '#181818',
-            'surface-container-lowest': '#080808',
-            primary: '#EFF7FF',
-            'primary-container': '#3B9EFF',
+            surface: '#0B0C10',
+            'surface-dim': '#07080B',
+            'surface-container': '#111217',
+            'surface-container-lowest': '#06070A',
+            primary: '#F6F7F9',
+            'primary-container': '#F4B950',
             'on-surface': '#EDEDED',
-            'on-surface-variant': '#A0B3B8',
-            outline: '#2A3A40',
-            'outline-variant': '#1F2C30',
-            'surface-bright': '#2A2A2A',
-            'dark-gold': '#B8860B',
+            'on-surface-variant': '#9AA3AE',
+            outline: '#2A2E37',
+            'outline-variant': '#1D2027',
+            'surface-bright': '#1A1C22',
+            'dark-gold': '#F4B950',
           },
           borderRadius: {
             DEFAULT: '0px',
@@ -95,7 +95,10 @@
 <body class="bg-surface font-body selection:bg-primary-container/30 selection:text-primary">
 <nav class="fixed top-0 w-full z-50 glass-panel border-b border-primary-container/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
-    <div class="font-headline text-dark-gold font-bold tracking-widest uppercase text-sm sm:text-base">TWETA GLOBAL NETWORK</div>
+    <a href="#home" class="flex items-center gap-3 group">
+      <img src="assets/image.png" alt="TWETA logo" class="w-8 h-8 rounded-full border border-primary-container/20 bg-surface-container/60 object-contain" draggable="false" />
+      <span class="font-headline text-dark-gold font-bold tracking-widest uppercase text-sm sm:text-base group-hover:text-primary transition-colors">TWETA GLOBAL NETWORK</span>
+    </a>
     
     <!-- Desktop  -->
     <div class="hidden md:flex gap-6 lg:gap-8">
@@ -126,31 +129,31 @@
 <section id="home" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-3 sm:px-6 pt-24 sm:pt-20 pb-8">
   <div class="absolute inset-0 radial-bg-pulse pointer-events-none"></div>
   
-  <div class="z-10 text-center max-w-7xl w-full">
-    <div class="mb-6 sm:mb-8">
-      <h1 class="font-headline text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-[0.12em] text-dark-gold uppercase leading-tight sm:leading-[1.1]">
-        TWETA
-      </h1>
-      <p class="font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-[0.12em] text-primary uppercase leading-tight sm:leading-[1.1] mt-2">
-        GLOBAL NETWORK
-      </p>
-    </div>
+	  <div class="z-10 text-center max-w-7xl w-full">
+	    <div class="mb-6 sm:mb-8">
+	      <h1 class="font-headline text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-[0.12em] text-dark-gold uppercase leading-tight sm:leading-[1.1]">
+	        TWETA
+	      </h1>
+	      <p class="font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-[0.12em] text-primary uppercase leading-tight sm:leading-[1.1] mt-2">
+	        GLOBAL NETWORK
+	      </p>
+	    </div>
     <!-- <div class="font-label text-primary-container/80 text-base md:text-lg tracking-[0.3em] uppercase mt-3 flex items-center justify-center gap-3">
       <span class="w-8 h-px bg-primary-container/40"></span>
       <span class="border border-primary-container/40 px-6 py-2 backdrop-blur-sm">TGN</span>
       <span class="w-8 h-px bg-primary-container/40"></span>
     </div> -->
-    <div class="relative w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto mb-8 sm:mb-12 group">
-      <div class="absolute inset-0 rounded-full glass-panel accent-glow flex items-center justify-center overflow-hidden">
-        <div class="w-full h-full opacity-20 bg-gradient-to-br from-primary-container/40 to-transparent"></div>
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div class="w-4/5 h-px bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-40"></div>
-          <div class="h-4/5 w-px bg-gradient-to-b from-transparent via-primary-container to-transparent opacity-40"></div>
-        </div>
-        <span class="material-symbols-outlined text-3xl sm:text-4xl md:text-5xl text-primary-container/50 font-thin" style="font-variation-settings: 'FILL' 0, 'wght' 200;">network_intelligence</span>
-      </div>
-      <div class="absolute -inset-6 bg-primary-container/5 rounded-full blur-3xl -z-5"></div>
-    </div>
+	    <div class="relative w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 mx-auto mb-8 sm:mb-12 group">
+	      <div class="absolute inset-0 rounded-full glass-panel accent-glow border border-primary-container/15 flex items-center justify-center overflow-hidden transition-transform duration-300 ease-out group-hover:scale-[1.02]">
+	        <img
+	          src="assets/image.png"
+	          alt="TWETA Global Network logo"
+	          class="w-[72%] h-[72%] object-contain drop-shadow-[0_18px_60px_rgba(0,0,0,0.55)] select-none"
+	          draggable="false"
+	        />
+	      </div>
+	      <div class="absolute -inset-8 bg-primary-container/10 rounded-full blur-3xl -z-10"></div>
+	    </div>
 
     <p class="font-label text-on-surface-variant text-[10px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.35em] uppercase max-w-3xl mx-auto px-2">
       The Next Phase of Blockchain Technology & Cryptocurrencies
@@ -178,7 +181,7 @@
         AI Integrated
       </h2>
       <p class="font-body text-sm sm:text-base md:text-lg lg:text-xl text-on-surface-variant/80 leading-relaxed font-light max-w-xl mb-4 sm:mb-6">
-        TGN Protocol utilizes Intelligent automation across the blockchain. Synthetic neural cores handle high‑frequency transaction verification, predictive fee markets, and adaptive load balancing. The system continuously learns from network conditions to optimise throughput and reduce latency.
+        TGN Protocol uses intelligent automation across the blockchain. Synthetic neural cores handle high‑frequency transaction verification, predictive fee markets, and adaptive load balancing. The system continuously learns from network conditions to optimise throughput and reduce latency.
       </p>
       <div class="space-y-2 sm:space-y-3 text-on-surface-variant/70 text-xs sm:text-sm md:text-base font-light">
         <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>Real‑time fraud detection via on‑chain anomaly scoring models</span></div>
@@ -203,7 +206,7 @@
         Lightning Speed Infrastructure
       </h2>
       <p class="font-body text-on-surface-variant/70 max-w-3xl mx-auto mt-3 sm:mt-4 text-xs sm:text-sm md:text-base font-light px-2">
-        TGN Blockchain system (Twetachain) has a near‑instant execution with optimised consensus. Sub‑5ms cross‑shard communication, 50,000+ sustained transactions per second. The network leverages a hierarchical sharding architecture with recursive zero‑knowledge proofs for state verification.
+        The TGN blockchain (Twetachain) delivers near‑instant execution with optimised consensus: sub‑5ms cross‑shard communication and 50,000+ sustained transactions per second. The network leverages a hierarchical sharding architecture with recursive zero‑knowledge proofs for state verification.
       </p>
     </div>
     
@@ -286,7 +289,7 @@
         Advanced Anonymity
       </h2>
       <p class="font-body text-sm sm:text-base md:text-lg lg:text-xl text-on-surface-variant/80 leading-relaxed font-light max-w-xl mb-4 sm:mb-6">
-        Privacy‑first design with identity protection. Zero‑knowledge proofs, stealth addressing, and optional shielded pools give users complete control over transactional privacy while remaining compliant with regulatory frameworks through selective disclosure.
+        TGN Protocol is privacy‑first, with identity protection by default. Zero‑knowledge proofs, stealth addressing, and optional shielded pools give users complete control over transactional privacy while remaining compliant with regulatory frameworks through selective disclosure.
       </p>
       <div class="space-y-2 sm:space-y-3 text-on-surface-variant/70 text-xs sm:text-sm md:text-base font-light">
         <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>zk‑SNARKs for fully confidential transactions</span></div>
@@ -322,17 +325,18 @@
       <span>190+ COUNTRIES SUPPORTED</span>
     </div>
     <p class="font-body text-on-surface-variant/60 text-xs sm:text-sm md:text-base max-w-2xl mx-auto mt-4 sm:mt-6 leading-relaxed">
-      The network is architected for horizontal scaling: each shard processes independently, with communication finalised in under 5ms. Validator set rotates via AI‑driven reputation scoring.
+      TGN Protocol is architected for horizontal scaling: each shard processes independently, with communication finalised in under 5ms. Validator set rotates via AI‑driven reputation scoring.
     </p>
-    <div class="mt-10 sm:mt-14 lg:mt-16 h-px w-40 sm:w-48 mx-auto bg-gradient-to-r from-transparent via-primary-container to-transparent"></div>
+    <div class="mt-10 sm:mt-14 lg:mt-16 h-px w-40 sm:w-48 mx-auto bg-primary-container/30 rounded-full"></div>
   </div>
 </section>
 
 <footer class="border-t border-primary-container/10 bg-surface w-full">
   <div class="flex flex-col gap-6 md:gap-0 md:flex-row justify-between items-center w-full px-4 sm:px-8 md:px-12 py-8 sm:py-10 max-w-screen-2xl mx-auto">
-    <div class="text-dark-gold font-headline tracking-[0.2em] font-bold uppercase text-xs sm:text-sm flex items-center gap-2">
-      TWETA 
-   </div>
+    <div class="text-dark-gold font-headline tracking-[0.2em] font-bold uppercase text-xs sm:text-sm flex items-center gap-3">
+      <img src="assets/image.png" alt="" class="w-7 h-7 rounded-full border border-primary-container/20 bg-surface-container/60 object-contain" draggable="false" />
+      <span>TWETA GLOBAL NETWORK</span>
+    </div>
     
     <div class="flex flex-wrap justify-center gap-x-8 sm:gap-x-10 gap-y-2 sm:gap-y-3 items-center">
       <div class="flex flex-col items-center md:items-start gap-1">
