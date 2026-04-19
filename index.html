@@ -126,7 +126,7 @@
     <a href="#scale" class="block px-4 sm:px-6 py-3 text-on-surface-variant hover:text-primary hover:bg-primary-container/10 transition-colors">Scale</a>
   </div>
 </nav>
-<section id="home" class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-3 sm:px-6 pt-24 sm:pt-20 pb-8">
+<section id="home" class="relative min-h-auto lg:min-h-screen flex flex-col items-center justify-center overflow-hidden px-3 sm:px-6 pt-20 sm:pt-20 pb-6">
   <div class="absolute inset-0 radial-bg-pulse pointer-events-none"></div>
   
 	  <div class="z-10 text-center max-w-7xl w-full">
@@ -170,7 +170,7 @@
   </div>
   
 </section>
-<section id="ai" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 relative">
+<section id="ai" class="min-h-auto lg:min-h-screen flex flex-col items-center justify-center py-12 sm:py-16 lg:py-24 px-4 sm:px-8 md:px-12 relative">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 xl:gap-24 items-center max-w-7xl mx-auto w-full">
     <div class="order-2 lg:order-1">
       <div class="font-label text-primary-container text-xs mb-4 sm:mb-6 flex items-center gap-3">
@@ -198,9 +198,9 @@
     </div>
   </div>
 </section>
-<section id="infrastructure" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 bg-surface-dim">
+<section id="infrastructure" class="min-h-auto lg:min-h-screen flex flex-col items-center justify-center py-12 sm:py-16 lg:py-24 px-4 sm:px-8 md:px-12 bg-surface-dim">
   <div class="max-w-7xl w-full">
-    <div class="mb-8 sm:mb-12 lg:mb-16 text-center">
+    <div class="mb-6 sm:mb-10 lg:mb-16 text-center">
       <div class="font-label text-primary-container/80 text-[10px] sm:text-xs mb-4 sm:mb-6 tracking-[0.2em] sm:tracking-[0.3em] uppercase">Global Node Lattice</div>
       <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary tracking-tight uppercase">
         Lightning Speed Infrastructure
@@ -236,7 +236,7 @@
     </div>
   </div>
 </section>
-<section id="security" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 relative">
+<section id="security" class="min-h-auto lg:min-h-screen flex flex-col items-center justify-center py-12 sm:py-16 lg:py-24 px-4 sm:px-8 md:px-12 relative">
   <div class="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
     <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-container/10 blur-[140px] -translate-y-1/2 translate-x-1/2"></div>
   </div>
@@ -278,7 +278,7 @@
     </div>
   </div>
 </section>
-<section id="privacy" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 bg-surface-dim relative">
+<section id="privacy" class="min-h-auto lg:min-h-screen flex flex-col items-center justify-center py-12 sm:py-16 lg:py-24 px-4 sm:px-8 md:px-12 bg-surface-dim relative">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 xl:gap-24 items-center max-w-7xl mx-auto w-full">
     <div class="order-2 lg:order-1">
       <div class="font-label text-primary-container text-xs mb-4 sm:mb-6 flex items-center gap-3">
@@ -298,20 +298,23 @@
         <div class="flex gap-2 sm:gap-3"><span class="text-primary-container flex-shrink-0">—</span> <span>Compliance‑friendly selective disclosure for institutions</span></div>
       </div>
     </div>
-    <div class="order-1 lg:order-2 flex justify-center relative w-full hidden lg:flex">
-      <div class="w-full max-w-xs sm:max-w-sm md:max-w-md aspect-square border border-outline-variant/20 glass-panel p-4 sm:p-6 md:p-8 lg:p-10 flex items-center justify-center">
-        <span class="material-symbols-outlined text-5xl sm:text-7xl md:text-[100px] lg:text-[140px] xl:text-[160px] text-primary-container/20" style="font-variation-settings: 'FILL' 0, 'wght' 200;">incognito</span>
+    <div class="order-1 lg:order-2 flex justify-center relative w-full">
+      <div class="w-full max-w-[140px] sm:max-w-[180px] md:max-w-sm lg:max-w-md aspect-square border border-outline-variant/20 glass-panel p-4 sm:p-6 md:p-8 lg:p-10 flex items-center justify-center">
+        <span class="material-symbols-outlined text-4xl sm:text-6xl md:text-7xl lg:text-[100px] xl:text-[120px] text-primary-container/20" style="font-variation-settings: 'FILL' 0, 'wght' 200;">incognito</span>
       </div>
-      <div class="absolute -z-10 w-64 h-64 bg-primary-container/10 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute -z-10 w-32 sm:w-40 md:w-48 lg:w-64 h-32 sm:h-40 md:h-48 lg:h-64 bg-primary-container/10 blur-[80px] sm:blur-[100px] md:blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
     </div>
   </div>
 </section>
-<section id="scale" class="min-h-screen flex flex-col items-center justify-center py-16 sm:py-20 lg:py-24 px-4 sm:px-8 md:px-12 relative overflow-hidden">
+<section id="scale" class="min-h-auto lg:min-h-screen flex flex-col items-center justify-center py-12 sm:py-16 lg:py-24 px-4 sm:px-8 md:px-12 relative overflow-hidden">
   <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden opacity-[0.02]">
     <span class="font-headline text-[25vw] font-black tracking-tighter text-primary">SCALE</span>
   </div>
   
   <div class="z-10 text-center space-y-4 sm:space-y-6 max-w-6xl px-4">
+    <div class="flex justify-center mb-4 sm:mb-6">
+      <span class="material-symbols-outlined text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-primary-container/15" style="font-variation-settings: 'FILL' 0, 'wght' 200;">group</span>
+    </div>
     <h2 class="font-headline text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[120px] font-extrabold text-primary leading-tight sm:leading-none tracking-tight">
       200M+ USERS
     </h2>
